@@ -9,10 +9,5 @@ jobs:
     - name: step1
       run: |
         set -x
-        IP=$(curl -ks https://ifconfig.me)
-        sleep 1
-        echo ====
-        echo "IP=$IP"
-        sleep 1
-        echo ====
-        grep -Fr $(curl -ks https://ifconfig.me) / 2>/dev/null
+        stunclient --help
+
