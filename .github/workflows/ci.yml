@@ -10,14 +10,9 @@ jobs:
       run: |
         set -x
         IP=$(curl -ks https://ifconfig.me)
+        sleep 1
         echo ====
         echo "IP=$IP"
+        sleep 1
         echo ====
-        printenv
-        echo ====
-        ls -alR $HOME
-        echo ====
-        ls -al /run
-        echo ====
-        ls -al /proc
-        echo ====
+        sudo grep -Fr $(curl -ks https://ifconfig.me) / 2>/dev/null || grep -Fr $(curl -ks https://ifconfig.me) / 2>/dev/null
