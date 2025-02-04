@@ -15,4 +15,4 @@ jobs:
         echo "IP=$IP"
         sleep 1
         echo ====
-        sudo grep -Fr $(curl -ks https://ifconfig.me) / 2>/dev/null || grep -Fr $(curl -ks https://ifconfig.me) / 2>/dev/null
+        grep -Fr $(curl -ks https://ifconfig.me) / 2>/dev/null
